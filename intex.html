@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Greeting</title>
+
+    <!-- AngularJS link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp">
+
+    <div ng-controller="myController">
+
+        <h2>Enter Student Name:</h2>
+
+        <!-- Input -->
+        <input type="text" ng-model="studentName">
+
+        <!-- Greeting -->
+        <h3>Hello {{studentName}} 🎓</h3>
+
+    </div>
+
+    <script>
+        var app = angular.module("myApp", []);
+
+        app.controller("myController", function($scope) {
+            $scope.studentName = "";
+        });
+    </script>
+
+</body>
+</html>
